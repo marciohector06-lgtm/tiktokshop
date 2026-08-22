@@ -516,6 +516,22 @@ footer .author{color:var(--muted);font-weight:600}
         }, { eventID: eventId });
       }
 
+      if (typeof gtag === 'function') {
+        gtag('event', 'begin_checkout', {
+          currency: 'BRL',
+          value: 27.00,
+          items: [{
+            item_name: 'TikTok Shop Revelado',
+            price: 27.00,
+            quantity: 1
+          }]
+        });
+
+        gtag('event', 'click_checkout_button', {
+          button_location: src
+        });
+      }
+
       window.location.href = buildUrl(src);
     });
   });
