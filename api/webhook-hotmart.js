@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-const PIXEL_ID = '966466459429153';
+const PIXEL_ID = process.env.PIXEL_ID || '1087485463789910';
 const APPROVED_STATUSES = ['APPROVED', 'COMPLETE'];
 
 function sha256(value) {
