@@ -125,7 +125,8 @@ section{position:relative}
 
 .founder{padding:80px 0}
 .founder-box{max-width:760px;margin:0 auto;display:flex;gap:22px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 32px}
-.founder-avatar{flex-shrink:0;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--pink-soft));display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:20px;color:#fff}
+.founder-avatar{flex-shrink:0;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--pink-soft));display:flex;align-items:center;justify-content:center;font-family:'Archivo Black';font-size:20px;color:#fff;overflow:hidden}
+.founder-avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .founder h3{font-size:18px;margin-bottom:2px}
 .founder .role{color:var(--teal);font-size:12.5px;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em}
 .founder p{color:var(--muted);font-size:14.5px}
@@ -135,7 +136,8 @@ section{position:relative}
 .testi-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px;transition:transform .3s cubic-bezier(.16,1,.3,1),border-color .3s}
 .testi-card:hover{transform:translateY(-5px);border-color:var(--teal)}
 .testi-card .who{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.testi-card .avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--teal));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0}
+.testi-card .avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--teal));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;overflow:hidden}
+.testi-card .avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .testi-card .name{font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;color:var(--white)}
 .testi-card .loc{color:var(--muted-2);font-size:11.5px}
 .testi-card p{color:var(--muted);font-size:13.5px;font-style:italic}
@@ -191,6 +193,9 @@ section{position:relative}
 
 .price{padding:100px 0;background:var(--bg-2);text-align:center;position:relative;overflow:hidden}
 .price .b1{width:340px;height:340px;background:radial-gradient(circle,rgba(255,45,111,.16),transparent 70%);top:-80px;right:-100px}
+.countdown{display:inline-flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--pink);border-radius:100px;padding:10px 24px 10px 20px;margin-top:8px}
+.countdown .lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+.countdown .time{font-family:'JetBrains Mono',monospace;font-size:19px;font-weight:700;color:var(--pink);letter-spacing:.04em}
 .price-card{position:relative;z-index:2;max-width:560px;margin:44px auto 0;background:var(--card);border:1.5px solid var(--pink);border-radius:24px;padding:44px 36px;box-shadow:0 20px 70px rgba(255,45,111,.15)}
 .anchor{color:var(--muted-2);font-size:18px;text-decoration:line-through;margin-bottom:6px}
 .big-price{font-family:'Archivo Black';font-size:clamp(56px,12vw,88px);color:var(--white);line-height:1;letter-spacing:-0.03em}
@@ -265,7 +270,7 @@ footer .author{color:var(--muted);font-weight:600}
     <p class="sub reveal reveal-d3">Do zero à primeira venda em 30 dias</p>
     <p class="lede reveal reveal-d4">Sem aparecer. Sem anúncio. Sem estoque. O guia definitivo para afiliados e criadores brasileiros que querem lucrar com comissão no TikTok Shop em 2026.</p>
     <div class="hero-cta reveal reveal-d5">
-      <a href="#" class="btn btn-primary btn-lg checkout-btn" data-src="hero">Quero transformar views em R$</a>
+      <a href="#" class="btn btn-primary btn-lg checkout-btn" data-src="hero">Acessar por R$27 agora</a>
       <a href="#modulos" class="btn btn-ghost">Ver Módulos</a>
     </div>
     <p class="hero-note reveal reveal-d6">Acesso imediato · Ebook completo em PDF · <b>Bônus IA UGC Realista incluso</b></p>
@@ -396,7 +401,7 @@ footer .author{color:var(--muted);font-weight:600}
 <section class="founder">
   <div class="wrap">
     <div class="founder-box reveal">
-      <div class="founder-avatar">MA</div>
+      <div class="founder-avatar"><img src="/img/matheus.jpg" alt="Matheus de Alcantara" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='MA'"></div>
       <div>
         <h3>Matheus de Alcantara A. da Silva</h3>
         <div class="role">Criador do TikTok Shop Revelado</div>
@@ -412,9 +417,9 @@ footer .author{color:var(--muted);font-weight:600}
     <h2 class="h-sec reveal reveal-d1">O que pessoas comuns estão <span class="teal">conquistando</span></h2>
     <p class="intro reveal reveal-d2">Depoimentos reais de quem já está aplicando o método.</p>
     <div class="testi-grid">
-      <div class="testi-card reveal"><div class="who"><span class="avatar">LS</span><div><div class="name">Lucas Souza</div><div class="loc">Porto Alegre, RS</div></div></div><p>"Eu estava desempregado e precisava de grana rápido. Segui o passo a passo do e-book sem pular nada e em 9 dias fiz minha primeira venda de R$ 42 de comissão. Pode não ser muito, mas pra quem tava no zero, foi tudo. Já fiz R$ 620 este mês."</p></div>
-      <div class="testi-card reveal reveal-d1"><div class="who"><span class="avatar">FL</span><div><div class="name">Fernanda Lima</div><div class="loc">Recife, PE</div></div></div><p>"Eu sou CLT e não tenho tempo pra nada. O melhor do método é que não preciso aparecer. Pego 1 hora por dia depois do trabalho, uso os roteiros prontos e posto. Meu primeiro vídeo que deu certo bateu 80 mil views e me rendeu 12 vendas. Nem acreditei."</p></div>
-      <div class="testi-card reveal reveal-d2"><div class="who"><span class="avatar">BC</span><div><div class="name">Bruna Costa</div><div class="loc">Belo Horizonte, MG</div></div></div><p>"Já tinha comprado uns 3 cursos sobre marketing digital e tava quase desistindo. A diferença aqui é a simplicidade. É direto ao ponto, sem enrolação. Em 2 semanas aplicando o que o Matheus ensina, já pingaram 4 comissões. Finalmente algo que funciona."</p></div>
+      <div class="testi-card reveal"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Lucas-Souza-POA&backgroundColor=161618" alt="Lucas Souza" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='LS'"></span><div><div class="name">Lucas Souza</div><div class="loc">Porto Alegre, RS</div></div></div><p>"Eu estava desempregado e precisava de grana rápido. Segui o passo a passo do e-book sem pular nada e em 9 dias fiz minha primeira venda de R$ 42 de comissão. Pode não ser muito, mas pra quem tava no zero, foi tudo. Já fiz R$ 620 este mês."</p></div>
+      <div class="testi-card reveal reveal-d1"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Fernanda-Lima-Recife&backgroundColor=161618" alt="Fernanda Lima" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='FL'"></span><div><div class="name">Fernanda Lima</div><div class="loc">Recife, PE</div></div></div><p>"Eu sou CLT e não tenho tempo pra nada. O melhor do método é que não preciso aparecer. Pego 1 hora por dia depois do trabalho, uso os roteiros prontos e posto. Meu primeiro vídeo que deu certo bateu 80 mil views e me rendeu 12 vendas. Nem acreditei."</p></div>
+      <div class="testi-card reveal reveal-d2"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Bruna-Costa-BH&backgroundColor=161618" alt="Bruna Costa" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='BC'"></span><div><div class="name">Bruna Costa</div><div class="loc">Belo Horizonte, MG</div></div></div><p>"Já tinha comprado uns 3 cursos sobre marketing digital e tava quase desistindo. A diferença aqui é a simplicidade. É direto ao ponto, sem enrolação. Em 2 semanas aplicando o que o Matheus ensina, já pingaram 4 comissões. Finalmente algo que funciona."</p></div>
     </div>
   </div>
 </section>
@@ -424,6 +429,7 @@ footer .author{color:var(--muted);font-weight:600}
   <div class="wrap">
     <span class="eyebrow reveal">Oferta de lançamento</span>
     <h2 class="h-sec reveal reveal-d1">Acesso imediato, <span class="pink">preço de entrada</span></h2>
+    <div class="countdown reveal reveal-d1"><span class="lbl">Oferta termina em</span><span class="time" id="countdownTime">24:00:00</span></div>
     <div class="price-card reveal reveal-d2">
       <div class="anchor">De R$247</div>
       <div class="big-price"><small>R$</small>27</div>
@@ -436,7 +442,7 @@ footer .author{color:var(--muted);font-weight:600}
         <li>Bancos de <b>20 ganchos + 15 CTAs prontos</b></li>
         <li>Todos os bônus + o <b>Bônus Exclusivo IA UGC Realista</b></li>
       </ul>
-      <a href="#" class="btn btn-primary btn-lg checkout-btn" style="width:100%" data-src="price">Quero transformar views em R$</a>
+      <a href="#" class="btn btn-primary btn-lg checkout-btn" style="width:100%" data-src="price">Acessar por R$27 agora</a>
       <p style="color:var(--muted-2);font-size:12px;margin-top:16px">Compra segura · Processado pela Hotmart</p>
     </div>
   </div>
@@ -552,24 +558,15 @@ footer .author{color:var(--muted);font-weight:600}
     });
   });
 
-  if (reduzirMovimento) return;
-
-  var observador = new IntersectionObserver(function(entradas) {
-    entradas.forEach(function(entrada) {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add('visible');
-        observador.unobserve(entrada.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-
-  document.querySelectorAll('.reveal').forEach(function(el) {
-    observador.observe(el);
-  });
-
   function animarContador(el) {
     var alvo = parseInt(el.getAttribute('data-count'), 10);
     var sufixo = el.getAttribute('data-suffix') || '';
+
+    if (reduzirMovimento) {
+      el.textContent = alvo + sufixo;
+      return;
+    }
+
     var duracao = 1400;
     var inicio = null;
 
@@ -598,6 +595,21 @@ footer .author{color:var(--muted);font-weight:600}
 
   document.querySelectorAll('[data-count]').forEach(function(el) {
     observadorContador.observe(el);
+  });
+
+  if (reduzirMovimento) return;
+
+  var observador = new IntersectionObserver(function(entradas) {
+    entradas.forEach(function(entrada) {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+        observador.unobserve(entrada.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    observador.observe(el);
   });
 
   var barraProgresso = document.getElementById('progressBar');
@@ -630,6 +642,45 @@ footer .author{color:var(--muted);font-weight:600}
   }, { passive: true });
 
   atualizarScroll();
+})();
+
+(function() {
+  var CHAVE = 'tsr_deadline';
+  var DURACAO = 24 * 60 * 60 * 1000;
+  var elTime = document.getElementById('countdownTime');
+  if (!elTime) return;
+
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function formatar(ms) {
+    var totalSeg = Math.max(0, Math.floor(ms / 1000));
+    var h = Math.floor(totalSeg / 3600);
+    var m = Math.floor((totalSeg % 3600) / 60);
+    var s = totalSeg % 60;
+    return pad(h) + ':' + pad(m) + ':' + pad(s);
+  }
+
+  var prazo;
+  try {
+    prazo = parseInt(localStorage.getItem(CHAVE), 10);
+    if (!prazo || isNaN(prazo)) {
+      prazo = Date.now() + DURACAO;
+      localStorage.setItem(CHAVE, prazo);
+    }
+  } catch (e) {
+    prazo = Date.now() + DURACAO;
+  }
+
+  var intervalo = setInterval(function() {
+    var restante = prazo - Date.now();
+    if (restante <= 0) {
+      elTime.textContent = '00:00:00';
+      clearInterval(intervalo);
+      return;
+    }
+    elTime.textContent = formatar(restante);
+  }, 1000);
+
+  elTime.textContent = formatar(prazo - Date.now());
 })();
 </script>
 </body>
