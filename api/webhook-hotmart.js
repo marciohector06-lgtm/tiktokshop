@@ -30,9 +30,9 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const accessToken = process.env.CAPI_TOKEN;
+  const accessToken = process.env.CAPI_TOKEN01;
   if (!accessToken) {
-    console.error('webhook-hotmart: CAPI_TOKEN não configurado');
+    console.error('webhook-hotmart: CAPI_TOKEN01 não configurado');
     res.status(200).json({ received: true, sent: false, reason: 'missing_access_token' });
     return;
   }
