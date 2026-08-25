@@ -15,8 +15,8 @@ module.exports = async (req, res) => {
 
   const body = req.body || {};
 
-  // Se HOTMART_HOTTOK estiver configurada, valida a origem do webhook.
-  const expectedHottok = process.env.HOTMART_HOTTOK;
+  // Se HOTMART_SECRET estiver configurada, valida a origem do webhook.
+  const expectedHottok = process.env.HOTMART_SECRET;
   if (expectedHottok && body.hottok !== expectedHottok) {
     res.status(401).json({ error: 'invalid_hottok' });
     return;
@@ -30,9 +30,9 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const accessToken = process.env.META_ACCESS_TOKEN;
+  const accessToken = process.env.CAPI_TOKEN;
   if (!accessToken) {
-    console.error('webhook-hotmart: META_ACCESS_TOKEN não configurado');
+    console.error('webhook-hotmart: CAPI_TOKEN não configurado');
     res.status(200).json({ received: true, sent: false, reason: 'missing_access_token' });
     return;
   }
