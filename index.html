@@ -89,7 +89,7 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;font-weight:700;line-height:1
 .tag:hover{background:var(--pink);color:#fff}
 .hero .hook{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(17px,2.4vw,22px);color:var(--muted);max-width:620px;margin:0 auto 18px}
 .hero h1{font-size:clamp(48px,9vw,104px);margin-bottom:22px}
-.hero h1 .l1{color:var(--pink);display:block}
+.hero h1 .l1{color:var(--pink)}
 .hero .sub{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(22px,4vw,34px);margin-bottom:20px}
 .hero .lede{font-size:clamp(15px,2.2vw,18px);color:var(--muted);max-width:600px;margin:0 auto 38px}
 .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;align-items:center}
@@ -104,6 +104,11 @@ h1,h2,h3,.display{font-family:'Archivo',sans-serif;font-weight:700;line-height:1
 .btn-lg{font-size:19px;padding:22px 54px}
 .hero-note{margin-top:22px;font-size:13px;color:var(--muted-2)}
 .hero-note b{color:var(--teal)}
+
+.vsl{padding:0 0 90px}
+.vsl-box{max-width:820px;margin:0 auto;aspect-ratio:16/9;background:var(--card);border:1.5px solid var(--line);border-radius:20px;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;position:relative;overflow:hidden}
+.vsl-box::before{content:"▶";position:absolute;font-size:54px;color:var(--pink);opacity:.18;top:50%;left:50%;transform:translate(-50%,-70%)}
+.vsl-box p{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(15px,2.4vw,19px);color:var(--muted);position:relative;z-index:2}
 
 .stats{background:var(--bg-2);padding:56px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -266,23 +271,43 @@ footer .author{color:var(--muted);font-weight:600}
 
 <div class="progress-bar" id="progressBar"></div>
 
-<div class="urgency">🔥 Oferta de lançamento — <b>de R$247 por</b><span>R$27</span> · o preço sobe sem aviso.</div>
+<div class="urgency">🔥 Oferta de lançamento: R$247 por <b>R$27</b> — preço sobe em breve <span class="countdown-live" data-countdown-display>24:00:00</span></div>
 
 <header class="hero">
   <div class="blob b1" data-parallax="0.25"></div><div class="blob b2" data-parallax="-0.18"></div>
   <div class="wrap hero-inner">
     <div class="tags reveal"><span class="tag">Para Afiliados</span><span class="tag">Para Criadores</span><span class="tag">Guia 2026</span></div>
     <p class="hook reveal reveal-d1">Enquanto você rola o feed, tem gente testando um jeito diferente de vender no TikTok Shop.</p>
-    <h1 class="reveal reveal-d2"><span class="l1">TikTok Shop</span>Revelado</h1>
-    <p class="sub reveal reveal-d3">Do zero à primeira venda em 30 dias</p>
-    <p class="lede reveal reveal-d4">Sem aparecer. Sem anúncio. Sem estoque. O guia definitivo para afiliados e criadores brasileiros que querem lucrar com comissão no TikTok Shop em 2026.</p>
+    <h1 class="reveal reveal-d2">Venda no <span class="l1">TikTok Shop</span> sem aparecer e sem estoque</h1>
+    <p class="sub reveal reveal-d3">O método que afiliados brasileiros estão usando para faturar comissão no TikTok Shop em menos de 7 dias — mesmo começando do zero</p>
+    <p class="lede reveal reveal-d4">Passo a passo completo: da configuração da loja ao primeiro vídeo, sem aparecer, sem anunciar e sem guardar estoque.</p>
     <div class="hero-cta reveal reveal-d5">
       <a href="#" class="btn btn-primary btn-lg checkout-btn" data-src="hero">Acessar por R$27 agora</a>
-      <a href="#modulos" class="btn btn-ghost">Ver Módulos</a>
+      <a href="#beneficios" class="btn btn-ghost">Ver Benefícios</a>
     </div>
     <p class="hero-note reveal reveal-d6">Acesso imediato · Ebook completo em PDF · <b>Bônus IA UGC Realista incluso</b></p>
   </div>
 </header>
+
+<!-- PROVA SOCIAL: depoimentos fictícios/ilustrativos — substituir por depoimentos reais de alunos assim que houver -->
+<section class="testi" style="padding-top:60px">
+  <div class="wrap">
+    <span class="eyebrow tl reveal">Prova social</span>
+    <h2 class="h-sec reveal reveal-d1">O que pessoas comuns estão <span class="teal">conquistando</span></h2>
+    <p class="intro reveal reveal-d2">Depoimentos ilustrativos de quem está aplicando o método. Resultados variam de pessoa para pessoa.</p>
+    <div class="testi-grid">
+      <div class="testi-card reveal"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Lucas-Souza-POA&backgroundColor=161618" alt="Lucas Souza" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='LS'"></span><div><div class="name">Lucas Souza</div><div class="loc">Porto Alegre, RS</div></div></div><p>"Eu estava desempregado e precisava de grana rápido. Segui o passo a passo sem pular nada e em 6 dias fiz minha primeira venda de R$ 42 de comissão. Já fiz R$ 620 este mês."</p></div>
+      <div class="testi-card reveal reveal-d1"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Fernanda-Lima-Recife&backgroundColor=161618" alt="Fernanda Lima" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='FL'"></span><div><div class="name">Fernanda Lima</div><div class="loc">Recife, PE</div></div></div><p>"Sou CLT e não tenho tempo pra nada. O melhor é que não preciso aparecer. Uso os roteiros prontos e posto. Meu primeiro vídeo que deu certo me rendeu 12 vendas e R$ 358 em comissão."</p></div>
+      <div class="testi-card reveal reveal-d2"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Bruna-Costa-BH&backgroundColor=161618" alt="Bruna Costa" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='BC'"></span><div><div class="name">Bruna Costa</div><div class="loc">Belo Horizonte, MG</div></div></div><p>"Já tinha comprado uns 3 cursos e tava quase desistindo. Aqui é direto ao ponto. Em 1 semana aplicando, já pingaram R$ 511 em comissões. Finalmente algo que funciona."</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="vsl">
+  <div class="wrap">
+    <div class="vsl-box reveal"><p>[VÍDEO: Assista antes de sair — 2 minutos]</p></div>
+  </div>
+</section>
 
 <section class="stats">
   <div class="wrap">
@@ -345,27 +370,18 @@ footer .author{color:var(--muted);font-weight:600}
   </div>
 </section>
 
-<section class="mods" id="modulos">
+<section class="mods" id="beneficios">
   <div class="wrap">
-    <span class="eyebrow reveal">O conteúdo completo</span>
-    <h2 class="h-sec reveal reveal-d1">O passo a passo para sua <span class="pink">primeira comissão</span></h2>
+    <span class="eyebrow reveal">O que você leva</span>
+    <h2 class="h-sec reveal reveal-d1">6 formas de chegar na sua <span class="pink">primeira comissão</span></h2>
     <p class="intro reveal reveal-d2">Um método validado, do zero à primeira venda, com uma estrutura simples, clara e focada 100% na execução.</p>
     <div class="mod-grid">
-      <div class="mod reveal"><span class="lbl">Módulo 1</span><span class="txt">Por que o TikTok Shop agora</span><p class="desc">Entenda por que a janela de oportunidade ainda está aberta e por que quem entra agora sai na frente.</p></div>
-      <div class="mod reveal reveal-d1"><span class="lbl">Módulo 2</span><span class="txt">O que você precisa para começar</span><p class="desc">Os requisitos reais pra virar afiliado e o que separa quem se destaca de quem fica parado.</p></div>
-      <div class="mod reveal reveal-d1"><span class="lbl">Módulo 3</span><span class="txt">Crescer para 2.000 seguidores em 30 dias</span><p class="desc">O plano dia a dia dos primeiros 30 dias, com metas por semana e ganchos prontos pra usar.</p></div>
-      <div class="mod reveal reveal-d2"><span class="lbl">Módulo 4</span><span class="txt">Criar UGC com IA sem aparecer</span><p class="desc">O passo a passo com IA pra gravar vídeos que parecem reais, sem câmera e sem mostrar o rosto.</p></div>
-      <div class="mod reveal reveal-d2"><span class="lbl">Módulo 5</span><span class="txt">Produtos com maior comissão</span><p class="desc">Os 4 filtros que os maiores afiliados usam antes de promover qualquer produto.</p></div>
-      <div class="mod reveal reveal-d3"><span class="lbl">Módulo 6</span><span class="txt">Passo a passo para ativar sua loja</span><p class="desc">Do cadastro no Creator Center à vitrine ativa, sem travar na aprovação.</p></div>
-      <div class="mod reveal reveal-d3"><span class="lbl">Módulo 7</span><span class="txt">Checklist do zero à primeira venda</span><p class="desc">Os 6 marcos que mostram se você está no caminho certo — e o que fazer em cada um.</p></div>
-      <div class="mod reveal reveal-d4"><span class="lbl">Módulo 8</span><span class="txt">Próximos passos</span><p class="desc">O que fazer hoje, essa semana, esse mês e nos próximos 90 dias pra escalar o que funciona.</p></div>
-      <div class="mod reveal reveal-d4"><span class="lbl tl">Antes de tudo</span><span class="txt">Configure seu perfil do zero</span></div>
-      <div class="mod reveal reveal-d5"><span class="lbl tl">Exemplo real</span><span class="txt">Seu primeiro vídeo em 35 minutos</span></div>
-      <div class="mod reveal reveal-d5"><span class="lbl tl">Bônus 5</span><span class="txt">Live no TikTok Shop</span></div>
-      <div class="mod reveal reveal-d5"><span class="lbl tl">Bônus 6</span><span class="txt">Fluxo completo UGC com IA</span></div>
-      <div class="mod reveal reveal-d6"><span class="lbl tl">Bônus 7</span><span class="txt">Produtos viralizando agora</span></div>
-      <div class="mod reveal reveal-d6"><span class="lbl tl">Quando travar</span><span class="txt">O que fazer quando não vem venda</span></div>
-      <div class="mod excl reveal reveal-d6"><span class="lbl">Bônus</span><span class="txt">Bônus Exclusivo — IA UGC Realista</span><span class="badge">Exclusivo</span></div>
+      <div class="mod reveal"><span class="lbl">Benefício 1</span><span class="txt">Como gravar vídeos sem aparecer, para vender todos os dias sem vergonha da câmera</span></div>
+      <div class="mod reveal reveal-d1"><span class="lbl">Benefício 2</span><span class="txt">Como usar IA para criar UGC realista, para prender a atenção nos primeiros 3 segundos</span></div>
+      <div class="mod reveal reveal-d2"><span class="lbl">Benefício 3</span><span class="txt">Como escolher produtos com comissão alta, para lucrar mais em cada venda</span></div>
+      <div class="mod reveal reveal-d3"><span class="lbl">Benefício 4</span><span class="txt">Como ativar sua loja de afiliado, para começar a vender ainda hoje, sem estoque</span></div>
+      <div class="mod reveal reveal-d4"><span class="lbl">Benefício 5</span><span class="txt">Como usar roteiros e ganchos prontos, para não travar na hora de gravar</span></div>
+      <div class="mod reveal reveal-d5"><span class="lbl">Benefício 6</span><span class="txt">Como aplicar o plano passo a passo, para sair do zero à primeira comissão</span></div>
     </div>
   </div>
 </section>
@@ -373,7 +389,7 @@ footer .author{color:var(--muted);font-weight:600}
 <section class="midcta">
   <div class="wrap">
     <h3 class="reveal">Tudo isso pra você começar a vender <span class="pink">esta semana</span>.</h3>
-    <a href="#" class="btn btn-primary btn-lg checkout-btn reveal reveal-d1" data-src="midcta">Sim, quero começar agora</a>
+    <a href="#" class="btn btn-primary btn-lg checkout-btn reveal reveal-d1" data-src="midcta">Acessar por R$27 agora</a>
   </div>
 </section>
 
@@ -418,25 +434,12 @@ footer .author{color:var(--muted);font-weight:600}
   </div>
 </section>
 
-<section class="testi">
-  <div class="wrap">
-    <span class="eyebrow tl reveal">Prova social</span>
-    <h2 class="h-sec reveal reveal-d1">O que pessoas comuns estão <span class="teal">conquistando</span></h2>
-    <p class="intro reveal reveal-d2">Depoimentos reais de quem já está aplicando o método.</p>
-    <div class="testi-grid">
-      <div class="testi-card reveal"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Lucas-Souza-POA&backgroundColor=161618" alt="Lucas Souza" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='LS'"></span><div><div class="name">Lucas Souza</div><div class="loc">Porto Alegre, RS</div></div></div><p>"Eu estava desempregado e precisava de grana rápido. Segui o passo a passo do e-book sem pular nada e em 9 dias fiz minha primeira venda de R$ 42 de comissão. Pode não ser muito, mas pra quem tava no zero, foi tudo. Já fiz R$ 620 este mês."</p></div>
-      <div class="testi-card reveal reveal-d1"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Fernanda-Lima-Recife&backgroundColor=161618" alt="Fernanda Lima" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='FL'"></span><div><div class="name">Fernanda Lima</div><div class="loc">Recife, PE</div></div></div><p>"Eu sou CLT e não tenho tempo pra nada. O melhor do método é que não preciso aparecer. Pego 1 hora por dia depois do trabalho, uso os roteiros prontos e posto. Meu primeiro vídeo que deu certo bateu 80 mil views e me rendeu 12 vendas. Nem acreditei."</p></div>
-      <div class="testi-card reveal reveal-d2"><div class="who"><span class="avatar"><img src="https://api.dicebear.com/9.x/personas/svg?seed=Bruna-Costa-BH&backgroundColor=161618" alt="Bruna Costa" loading="lazy" onerror="var p=this.parentElement;this.remove();p.textContent='BC'"></span><div><div class="name">Bruna Costa</div><div class="loc">Belo Horizonte, MG</div></div></div><p>"Já tinha comprado uns 3 cursos sobre marketing digital e tava quase desistindo. A diferença aqui é a simplicidade. É direto ao ponto, sem enrolação. Em 2 semanas aplicando o que o Matheus ensina, já pingaram 4 comissões. Finalmente algo que funciona."</p></div>
-    </div>
-  </div>
-</section>
-
 <section class="price" id="comprar">
   <div class="blob b1" data-parallax="0.22"></div>
   <div class="wrap">
     <span class="eyebrow reveal">Oferta de lançamento</span>
     <h2 class="h-sec reveal reveal-d1">Acesso imediato, <span class="pink">preço de entrada</span></h2>
-    <div class="countdown reveal reveal-d1"><span class="lbl">Oferta termina em</span><span class="time" id="countdownTime">24:00:00</span></div>
+    <div class="countdown reveal reveal-d1"><span class="lbl">Oferta termina em</span><span class="time" data-countdown-display>24:00:00</span></div>
     <div class="price-card reveal reveal-d2">
       <div class="anchor">De R$247</div>
       <div class="big-price"><small>R$</small>27</div>
@@ -449,7 +452,7 @@ footer .author{color:var(--muted);font-weight:600}
         <li>Bancos de <b>20 ganchos + 15 CTAs prontos</b></li>
         <li>Todos os bônus + o <b>Bônus Exclusivo IA UGC Realista</b></li>
       </ul>
-      <a href="#" class="btn btn-primary btn-lg checkout-btn" style="width:100%" data-src="price">Acessar por R$27 agora</a>
+      <a href="#" class="btn btn-primary btn-lg checkout-btn" style="width:100%" data-src="price">Garantir Meu Acesso Agora</a>
       <p style="color:var(--muted-2);font-size:12px;margin-top:16px">Compra segura · Processado pela Hotmart</p>
     </div>
   </div>
@@ -472,13 +475,11 @@ footer .author{color:var(--muted);font-weight:600}
     <span class="eyebrow reveal">Perguntas frequentes</span>
     <h2 class="h-sec reveal reveal-d1">Antes de você <span class="pink">decidir</span></h2>
     <div class="faq-list reveal reveal-d2">
-      <div class="faq-item"><button class="faq-q">Preciso aparecer nos vídeos?</button><div class="faq-a"><p>Não. Um módulo inteiro ensina a criar UGC com IA — vídeos que parecem gravados por uma pessoa real, sem mostrar rosto nem voz. O guia inclui a ficha da personagem e os prompts prontos.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Funciona pra quem está começando do zero?</button><div class="faq-a"><p>Sim. Foi documentado por alguém que começou com 200 seguidores, sem loja e sem produto. Tem até uma seção "Antes de tudo" pra configurar seu perfil do absoluto zero em 15 minutos.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Quanto tempo até a primeira venda?</button><div class="faq-a"><p>O método é de 30 dias. Segundo o guia, a primeira venda costuma acontecer entre o dia 15 e o dia 45 com consistência diária. Quem desiste antes do dia 30 perde a maior parte das oportunidades.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Preciso investir em anúncios ou estoque?</button><div class="faq-a"><p>Não. Todo o método é orgânico, sem anúncio e sem estoque. As ferramentas usadas (ChatGPT, ElevenLabs, Higgsfield, CapCut) têm planos gratuitos que dão conta de começar.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Como recebo o material?</button><div class="faq-a"><p>Acesso imediato. Assim que a compra é confirmada pela Hotmart, você recebe o ebook em PDF e todos os bônus por e-mail.</p></div></div>
-      <div class="faq-item"><button class="faq-q">Isso é só mais um "cursinho" que não funciona?</button><div class="faq-a"><p>Não é curso em vídeo — é um guia direto ao ponto. Cada estratégia foi documentada na prática, sem enrolação: só o passo a passo que funcionou pra sair do zero até a primeira comissão.</p></div></div>
-      <div class="faq-item"><button class="faq-q">E se não funcionar pra mim?</button><div class="faq-a"><p>Você tem 7 dias de garantia incondicional. Se não gostar, pede reembolso pela Hotmart e recebe 100% do valor de volta.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Preciso aparecer em vídeos?</button><div class="faq-a"><p>Não. Um módulo inteiro ensina a criar UGC com IA — vídeos que parecem gravados por uma pessoa real, sem mostrar rosto nem voz. O guia inclui a ficha da personagem e os prompts prontos.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Funciona sem experiência prévia?</button><div class="faq-a"><p>Sim. Foi documentado por alguém que começou com 200 seguidores, sem loja e sem produto. Tem até uma seção "Antes de tudo" pra configurar seu perfil do absoluto zero em 15 minutos.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Quanto tempo leva para ter resultados?</button><div class="faq-a"><p>Depende da sua consistência. Alguns alunos relatam a primeira comissão em menos de 7 dias aplicando o passo a passo todos os dias — mas não é uma promessa de resultado, e sim o que o método permite alcançar.</p></div></div>
+      <div class="faq-item"><button class="faq-q">E se não funcionar para mim?</button><div class="faq-a"><p>Você tem 7 dias de garantia incondicional. Se não gostar, pede reembolso pela Hotmart e recebe 100% do valor de volta, sem perguntas.</p></div></div>
+      <div class="faq-item"><button class="faq-q">Por que o preço é tão baixo?</button><div class="faq-a"><p>É uma oferta de lançamento por tempo limitado. O preço cheio é R$247 — o valor de R$27 é para validar o método com os primeiros compradores e sobe assim que a oferta acabar.</p></div></div>
     </div>
   </div>
 </section>
@@ -489,7 +490,7 @@ footer .author{color:var(--muted);font-weight:600}
     <h2 class="reveal"><span class="l1">Sua primeira venda</span>começa agora</h2>
     <p class="quote reveal reveal-d1">"A melhor hora para começar era ontem. A segunda melhor hora é agora."</p>
     <p class="handle reveal reveal-d2">@tiktokshoprevelado</p>
-    <a href="#" class="btn btn-primary btn-lg checkout-btn reveal reveal-d3" data-src="final">Ativar Minha Loja Agora — R$27</a>
+    <a href="#" class="btn btn-primary btn-lg checkout-btn reveal reveal-d3" data-src="final">Acessar por R$27 agora</a>
   </div>
 </section>
 
@@ -654,8 +655,8 @@ footer .author{color:var(--muted);font-weight:600}
 (function() {
   var CHAVE = 'tsr_deadline';
   var DURACAO = 24 * 60 * 60 * 1000;
-  var elTime = document.getElementById('countdownTime');
-  if (!elTime) return;
+  var elsTime = document.querySelectorAll('[data-countdown-display]');
+  if (!elsTime.length) return;
 
   function pad(n) { return (n < 10 ? '0' : '') + n; }
   function formatar(ms) {
@@ -666,28 +667,38 @@ footer .author{color:var(--muted);font-weight:600}
     return pad(h) + ':' + pad(m) + ':' + pad(s);
   }
 
-  var prazo;
-  try {
-    prazo = parseInt(localStorage.getItem(CHAVE), 10);
-    if (!prazo || isNaN(prazo)) {
+  function lerPrazo() {
+    var prazo;
+    try {
+      prazo = parseInt(localStorage.getItem(CHAVE), 10);
+      if (!prazo || isNaN(prazo)) {
+        prazo = Date.now() + DURACAO;
+        localStorage.setItem(CHAVE, prazo);
+      }
+    } catch (e) {
       prazo = Date.now() + DURACAO;
-      localStorage.setItem(CHAVE, prazo);
     }
-  } catch (e) {
-    prazo = Date.now() + DURACAO;
+    return prazo;
   }
 
-  var intervalo = setInterval(function() {
+  var prazo = lerPrazo();
+
+  function render(texto) {
+    elsTime.forEach(function(el) { el.textContent = texto; });
+  }
+
+  setInterval(function() {
     var restante = prazo - Date.now();
     if (restante <= 0) {
-      elTime.textContent = '00:00:00';
-      clearInterval(intervalo);
-      return;
+      // reinicia automaticamente por mais 24h ao expirar
+      prazo = Date.now() + DURACAO;
+      try { localStorage.setItem(CHAVE, prazo); } catch (e) {}
+      restante = DURACAO;
     }
-    elTime.textContent = formatar(restante);
+    render(formatar(restante));
   }, 1000);
 
-  elTime.textContent = formatar(prazo - Date.now());
+  render(formatar(prazo - Date.now()));
 })();
 </script>
 </body>
